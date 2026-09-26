@@ -1,0 +1,13 @@
+# The dsh-input-history bundle patch layer.
+#
+# Installed as a profile layer by:
+#   dsh plugin --profile web add dsh-input-history
+#
+# The host face (index.js) is a no-op composition plugin; the CLIENT half is
+# declared in package.json (`dsh.client` + `exports["./client"]`, built to
+# lib/client.js by `node build.mjs`), which the host client-modules service
+# scans into window.__DSH_BOOT__ at runtime. No dynamic Cordis runner, no
+# host route, no steering: the model never sees this plugin.
+- insert:
+    - id: dsh-input-history
+      name: dsh-input-history

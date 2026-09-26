@@ -1,0 +1,32 @@
+{
+  "name": "dsh-input-history",
+  "version": "0.3.0",
+  "description": "Claude Code-style input history for the DSH web composer: ArrowUp/ArrowDown recall of messages you sent in the CURRENT conversation (per-conversation history, not global). Stored in localStorage. Client-only behavior plugin (no host route, no UI slots).",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./src/client.js": "./src/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "src/client.js",
+    "lib/client.js",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}
