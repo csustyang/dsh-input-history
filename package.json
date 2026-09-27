@@ -1,7 +1,7 @@
 {
   "name": "dsh-input-history",
-  "version": "0.3.0",
-  "description": "Claude Code-style input history for the DSH web composer: ArrowUp/ArrowDown recall of messages you sent in the CURRENT conversation (per-conversation history, not global). Stored in localStorage. Client-only behavior plugin (no host route, no UI slots).",
+  "version": "0.4.0",
+  "description": "Claude Code-style input history for the DSH web composer: ArrowUp/ArrowDown recall of messages you sent in the CURRENT conversation (per-conversation history keyed by the host session id, not global). Stored in localStorage. Client-only behavior plugin (no host route, no UI slots).",
   "type": "module",
   "main": "index.js",
   "exports": {
